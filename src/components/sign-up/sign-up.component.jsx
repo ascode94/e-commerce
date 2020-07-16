@@ -31,8 +31,8 @@ class SignUp extends React.Component {
 
         try {
             const {user} = await auth.createUserWithEmailAndPassword(email, password)
-
-            await createUserProfileDocument(user, { displayName })
+            await createUserProfileDocument(user, {displayName})
+            console.log(user)
 
             //Clear The Form
             this.setState({displayName: '', email: '', password: '', confirmPassword: ''})
@@ -84,9 +84,7 @@ class SignUp extends React.Component {
                         required/>
 
                     <CustomButton type='submit'>SIGN UP</CustomButton>
-
                 </form>
-
             </div>
         );
     }
