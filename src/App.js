@@ -30,7 +30,6 @@ class App extends React.Component {
                         id: snapShpt.id,
                         ...snapShpt.data()
                     })
-                    console.log(this.props)
                 })
             } else {
                 setCurrentUser(userAuth)
